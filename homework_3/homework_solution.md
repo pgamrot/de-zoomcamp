@@ -124,6 +124,3 @@ but can add overhead costs in managing the table. Additionally, data with high c
 
 BigQuery estimates 0 B, because it retrieved the row count from the table's metadata. Adding a condition will cause BigQuery to estimate processed data.
 
-## Submitting the solutions
-
-Form for submitting: https://courses.datatalks.club/de-zoomcamp-2025/homework/hw3
