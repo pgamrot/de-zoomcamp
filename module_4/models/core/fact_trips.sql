@@ -27,6 +27,17 @@ select
     dropoff_zone.borough as dropoff_borough,
     dropoff_zone.zone as dropoff_zone,
     trips_unioned.pickup_datetime,
+    -- Year extraction
+    extract(year from trips_unioned.pickup_datetime) as trip_year,
+    
+    -- Quarter extraction
+    extract(quarter from trips_unioned.pickup_datetime) as trip_quarter,
+    
+    -- Year-Quarter combination (two common formats)
+    format_date('%Y/Q%q', trips_unioned.pickup_datetime) as year_quarter_slash,
+    
+    -- Month extraction
+    extract(month from trips_unioned.pickup_datetime) as trip_month,
     trips_unioned.dropoff_datetime,
     trips_unioned.store_and_fwd_flag,
     trips_unioned.passenger_count,
