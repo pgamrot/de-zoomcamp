@@ -3,11 +3,12 @@ version: 2
 sources:
   - name: staging
     database: eco-watch-233417
-    schema: zoomcamp
+    schema: homework_4
 
     tables:
-      - name: green_tripdata
-      - name: yellow_tripdata
+      - name: ext_green_taxi
+      - name: ext_yellow_taxi
+      - name: ext_fhv_taxi
 
 models:
   - name: stg_green_tripdata
